@@ -1,0 +1,36 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} AlibabaBot [NC]
+RewriteRule .* - [F,L]
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^/public/ 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+
+
+# Allow only one domain
+RewriteCond %{HTTP_HOST} !^www\.scoopgift\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^scoopgift\.com$ [NC]
+RewriteRule ^ - [F]
+
+RewriteRule ^(.*)$ public/$1 [L]
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?scoopgift\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.scoopgift.com//$1 [R,L]
+</IfModule>
