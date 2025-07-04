@@ -20,112 +20,25 @@ layout('layouts.merchant'); ?>
     </ul>
     <div class="card mt-4">
         <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs id="myTab" role="tablist"">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#payment" aria-controls="payment" aria-selected="true">Payment</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#history" aria-controls="history" aria-selected="true">History</a>
+            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+           
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#history" aria-controls="history" aria-selected="true">Payment History</a>
                 </li>
             </ul>
         </div>
         <div class="card-body tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="payment" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                <div class="row mt-2">
-                    <h2>Filter Option</h2>
-                    <div class="col-md-4 mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Affiliate</label>
-                        <input type="search" class="form-control" id="formGroupExampleInput" placeholder="Eg. Jason Holder">
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="inputReport" class="form-label">payment method</label>
-                        <select id="paymentMethod" class="form-select">
-                            <option selected>All</option>
-                            <option value="1">Cash App</option>
-                            <option value="2">UPI Coupon</option>
-                            <option value="2">Bank Transfer</option>
-                            <option value="2">Other</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Date</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
-                    </div>
-                </div>
-                <div class=" row table-section">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Affiliate</th>
-                                <th>Amount</th>
-                                <th>Payment Method</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="affiliate">
-                                    <span><a href="./affiliate-details.html" class="name">Corey Anderson</a></span>
-                                    <span>anderson.pay@aus.com</span>
-                                </td>
-                                <td>
-                                    <spa> $2000</span>
-                                </td>
-                                <td>
-                                    <span>Cash App</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="affiliate">
-                                    <span><a href="./affiliate-details.html" class="name">Corey Anderson</a></span>
-                                    <span>anderson.pay@aus.com</span>
-                                </td>
-                                <td>
-                                    <spa> $2000</span>
-                                </td>
-                                <td>
-                                    <span>Cash App</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="affiliate">
-                                    <span><a href="./affiliate-details.html" class="name">Corey Anderson</a></span>
-                                    <span>anderson.pay@aus.com</span>
-                                </td>
-                                <td>
-                                    <spa> $2000</span>
-                                </td>
-                                <td>
-                                    <span>Cash App</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="affiliate">
-                                    <span><a href="./affiliate-details.html" class="name">Corey Anderson</a></span>
-                                    <span>anderson.pay@aus.com</span>
-                                </td>
-                                <td>
-                                    <spa> $2000</span>
-                                </td>
-                                <td>
-                                    <span>Cash App</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <!-- ================Royalties Commissions=============== -->
-            <div class="tab-pane fade show" id="history" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            {{-- ================Royalties Commissions===============  --}}
+            <div class="tab-pane active show" id="history" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                 <div class="row mt-2">
                     <h2>Filter Option</h2>
                     <div class="col-md-6 mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Affiliate</label>
-                        <input type="search" class="form-control" id="formGroupExampleInput" placeholder="Eg. Jason Holder">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="text" class="form-control" id="startDate" placeholder="select start date" onfocus="(this.type = 'date')">
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Date</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="text" class="form-control" id="endDate" placeholder="select end date" onfocus="(this.type = 'date')">
                     </div>
                 </div>
                 <div class="row">
@@ -137,7 +50,6 @@ layout('layouts.merchant'); ?>
                         <thead>
                             <tr>
                                 <th>Date</th>
-                                <th>Affiliate</th>
                                 <th>Amount</th>
                                 <th>Payment Method</th>
                                 <th>Action</th>
@@ -149,71 +61,14 @@ layout('layouts.merchant'); ?>
                                     <span class="date">14 Oct 2023</span>
                                     <span>2:52 PM</span>
                                 </td>
-                                <td class="name">
-                                    <span><a href="./affiliate-details.html">AB De villiers</a></span>
-                                </td>
                                 <td>
                                     <span>$999</span>
                                 </td>
                                 <td class="">
                                     <span>Bank Transfer</span>
                                 </td>
-                                <td class="">
-                                    <span><a href="">Edit</a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="pay-time">
-                                    <span class="date">14 Oct 2023</span>
-                                    <span>2:52 PM</span>
-                                </td>
-                                <td class="name">
-                                    <span><a href="./affiliate-details.html">AB De villiers</a></span>
-                                </td>
                                 <td>
-                                    <span>$999</span>
-                                </td>
-                                <td class="">
-                                    <span>Bank Transfer</span>
-                                </td>
-                                <td class="">
-                                    <span><a href="">Edit</a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="pay-time">
-                                    <span class="date">14 Oct 2023</span>
-                                    <span>2:52 PM</span>
-                                </td>
-                                <td class="name">
-                                    <span><a href="./affiliate-details.html">AB De villiers</a></span>
-                                </td>
-                                <td>
-                                    <span>$999</span>
-                                </td>
-                                <td class="">
-                                    <span>Bank Transfer</span>
-                                </td>
-                                <td class="">
-                                    <span><a href="">Edit</a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="pay-time">
-                                    <span class="date">14 Oct 2023</span>
-                                    <span>2:52 PM</span>
-                                </td>
-                                <td class="name">
-                                    <span><a href="./affiliate-details.html">AB De villiers</a></span>
-                                </td>
-                                <td>
-                                    <span>$999</span>
-                                </td>
-                                <td class="">
-                                    <span>Bank Transfer</span>
-                                </td>
-                                <td class="">
-                                    <span><a href="">Edit</a></span>
+                                    <span>Self Transfer</span>
                                 </td>
                             </tr>
                         </tbody>

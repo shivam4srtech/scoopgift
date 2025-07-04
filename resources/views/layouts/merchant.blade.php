@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
     <!-- *********************************Boxi-icons************************************ -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <!-- ***********************************Montserrat********************************** -->
+    {{-- ***********************************Montserrat**********************************  --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -20,23 +20,22 @@
 
     @livewireStyles
     <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
-    <!-- *******************local stylesheet******************** -->
+    {{-- *******************local stylesheet******************** --}}
     <link rel="stylesheet" href="../dashboard-pages/stylesheet/global.css">
     <link rel="stylesheet" href="../dashboard-pages/stylesheet/dashboard.css">
      @stack('styles')
 </head>
 
 <body>
-    <!-- ***********************Dashboard Sidebar************************************** -->
-    <!-- SIDEBAR -->
+    {{-- SIDEBAR --}}
     <section id="sidebar">
         <a href="{{route('merchant.dashboard')}}" class="brand"><img class="logo" style="height: 36px; width: 36px;" src="../images/bigaffilogo.jpeg" alt=""> Scoop<span>Gift</span></a>
         <ul class="side-menu">
             <li><a href="{{route('merchant.dashboard')}}" class="active"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
-             <li><a href="/gift-card"><i class="fa-solid fa-percent icon"></i> Gift Card</a></li>
+             <li><a href="/gift-card"><i class="fa-solid fa-gift icon"></i> Gift Card</a></li>
             
             <li><a href="/commission"><i class="fa-solid fa-percent icon"></i> Commission</a></li>
-            <li><a href="/analytics"><i class="fa-solid fa-percent icon"></i> Analytics</a></li>
+            <li><a href="/analytics"><i class="fa-solid fa-chart-line icon"></i> Analytics</a></li>
             <li><a href="/payment"><i class='bx bx-dollar icon'></i> Payment</a></li>
             <li><a href="/settings"><i class='bx bx-cog icon'></i>Settings</a></li>
             <li><a href="#"><i class='bx bxs-contact icon'></i> Contact Us</a></li>

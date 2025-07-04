@@ -122,7 +122,7 @@ layout('layouts.merchant'); ?>
 <!-- Gift Card Manager UI -->
     <div class="d-flex align-items-center">
         <div class="me-auto">
-            <h1 class="title">Gift Card (/gift-card)</h1>
+            <h1 class="title">Gift Card</h1>
         </div>
         <div class="ms-auto">
             <a href="" data-bs-toggle="modal" data-bs-target="#addGiftCard" class="add-affi">Add Gift Card</a>

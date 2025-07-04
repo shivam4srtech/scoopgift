@@ -66,13 +66,13 @@ layout('layouts.merchant'); ?>
 						<div class="col-md-12 mb-3 d-none" id="percentages">
 							<div class="input-group mb-3">
 								<span class="input-group-text" id="basic-addon3">%</span>
-								<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+								<input type="number" class="form-control" id="basic-percentage" aria-describedby="basic-addon3">
 							</div>
 						</div>
 						<div class="col-md-12 mb-3 d-none" id="flatRate">
 							<div class="input-group mb-3">
 								<span class="input-group-text" id="basic-addon3">$</span>
-								<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+								<input type="number" class="form-control" id="basic-flatRate" aria-describedby="basic-addon3">
 							</div>
 						</div>
 						<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</a>

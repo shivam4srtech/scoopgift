@@ -30,9 +30,6 @@ layout('layouts.merchant'); ?>
                 <a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#payment" aria-controls="payment" aria-selected="true">Payment</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#report" aria-controls="report" aria-selected="true">Report</a>
-            </li>
-            <li class="nav-item" role="presentation">
                 <a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#integration" aria-controls="integration" aria-selected="true">Integration</a>
             </li>
             </ul>
@@ -62,7 +59,7 @@ layout('layouts.merchant'); ?>
                     </div>
                 </div>
             </div>
-            <!-- =========Notification============= -->
+            {{-- <!-- =========Notification============= --> --}}
             <div class="tab-pane fade show" id="notification" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                 <div class="row settings">
                     <div class="col-md-6">
@@ -101,52 +98,15 @@ layout('layouts.merchant'); ?>
                     <div class="col-md-6">
                         <h4>Personal Notification</h4>
                         <p>your prefered notification will send to <a href="">josTheBoss@jaldiKro.com</a></p>
-                        <a href="" class="customize-template">Customize email templates</a>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="col">
-                            <div class="tab-box">
-                                <div class="form-check check-box">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        When new affiliate registers
-                                    </label>
-                                </div>
-                                <div class="form-check check-box">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        When a new affiliate sale is made
-                                    </label>
-                                </div>
-                                <div class="form-check check-box">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        When an affiliate uploads a new file
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="row settings">
-                    <div class="col-md-6">
-                        <h4>Welcome Message</h4>
-                        <p>A welcome message will send to affilites at their registered email address once their account is approved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="col">
-                            <a href="" class="customize-template">Customize email templates</a>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- ================Payment==================== -->
+            {{-- <!-- ================Payment==================== --> --}}
             <div class="tab-pane fade show" id="payment" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                 <div class="row settings">
                     <div class="col-md-6">
                         <h4>Global Payment Methods</h4>
-                        <p>These are the worldwide supported payment methods. Your affiliates can see only those payment method which are checked by you. </p>
+                        <p>These are the worldwide supported payment methods receive payments </p>
                     </div>
                     <div class="col-md-6">
                         <div class="col">
@@ -163,30 +123,14 @@ layout('layouts.merchant'); ?>
                                         Debit Card
                                     </label>
                                 </div>
-                                <div class="form-check check-box">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Bitcoin
-                                    </label>
-                                </div>
-                                <div class="form-check check-box">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Cash
-                                    </label>
-                                </div>
+                             
                                 <div class="form-check check-box">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Bank Transfer (SWIFT/ACH)
                                     </label>
                                 </div>
-                                <div class="form-check check-box">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Payoneer
-                                    </label>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -200,13 +144,9 @@ layout('layouts.merchant'); ?>
                         <div class="col">
                             <select id="paymentMethod" class="form-select">
                                 <option selected>Paypal</option>
-                                <option value="1">Net Banking</option>
-                                <option value="2">Payoneer</option>
-                                <option value="3">Bitcoin</option>
                                 <option value="4">Debit Card</option>
                                 <option value="5">Bank Transfer (SWIFT/ACH)</option>
                                 <option value="6">UPI</option>
-                                <option value="6">Paytm</option>
                             </select>
                         </div>
                     </div>
@@ -214,7 +154,7 @@ layout('layouts.merchant'); ?>
                 <div class="row settings">
                     <div class="col-md-6">
                         <h4>Payment details</h4>
-                        <p>Kindly provide your refered payment details for receive payments on time.</p>
+                        <p>Kindly provide your prefered payment details for receive payments on time.</p>
                     </div>
                     <div class="col-md-6">
                         <form action="#somewhere">
@@ -242,8 +182,8 @@ layout('layouts.merchant'); ?>
                     </div>
                 </div>
             </div>
-            <!-- ================Report==================== -->
-            <div class="tab-pane fade show" id="report" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            {{-- ================Report==================== --}}
+            {{-- <div class="tab-pane fade show" id="report" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                 <div class="row settings">
                     <h4 class="text-center my-4">Download Report</h4>
                     <div class="col-md-6 mx-auto report-box">
@@ -294,8 +234,8 @@ layout('layouts.merchant'); ?>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- =======================Integration====================== -->
+            </div> --}}
+            {{-- <!-- =======================Integration====================== --> --}}
             <div class="tab-pane fade show" id="integration" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                 <div class="row settings">
                     <div class="col-md-6">
